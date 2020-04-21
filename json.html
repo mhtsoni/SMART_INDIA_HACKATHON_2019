@@ -1,0 +1,82 @@
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<style>
+    body{
+        background-color: black;
+        margin:0px;
+    }
+    h1{
+        text-align:center;
+        color:white;
+        font-family: 'Acme', sans-serif;
+    }
+    iframe{
+        display:block;
+        overflow: hidden;
+        margin: auto;
+        left: 0px;
+        top: 0px;
+        border: 2px solid #555;
+        height:250px;
+        width:100vw;
+    }
+    div{
+        display:block;
+        overflow: hidden;
+        margin: auto;
+        left: 0px;
+        top: 0px;
+        border: 2px solid #555;
+        height:250px;
+        width:100vw;
+    }
+    button{
+        margin:auto;
+        display:block;
+        width:100px;
+        height:25px;
+        font-size:15px;
+        margin-bottom:10px;
+        background-color: white;
+        border-radius: 10px;
+        border:1px solid blue;
+    }
+    @media only screen and (max-width: 1400px) {
+  div {
+      height:400px;
+      margin:bottom:150px;
+  }
+  iframe{
+      width:100vw;
+      height:400px;
+      margin:bottom:150px;
+  }
+}
+nav{
+    border:2px solid white;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:10px;
+}
+</style>
+    <nav>
+<h1>RealTime Water Usage.</h1>
+<button onclick="window.location.href='home.php'">Back</button>
+</nav>
+<h1>Water Flow Rate In Liters/Minute</h1>
+<div>
+
+<iframe src="https://thingspeak.com/channels/707462/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=5&type=line" scrolling="no">
+</iframe>
+</div>
+<h1>Water Flow Rate In MilliLiters/Second</h1>
+<div>
+
+<iframe src="https://thingspeak.com/channels/707462/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=5&type=line" scrolling="no">
+</iframe>
+</div>
+<h1>Water Consumption</h1>
+<div>
+
+<iframe src="https://thingspeak.com/channels/707462/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=5&type=line" scrolling="no">
+</iframe>
+</div>
